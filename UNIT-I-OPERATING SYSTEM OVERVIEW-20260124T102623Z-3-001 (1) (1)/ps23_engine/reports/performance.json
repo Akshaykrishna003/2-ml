@@ -1,0 +1,57 @@
+{
+  "benchmark": "PS-23 synthetic exhaustive pairwise benchmark v1",
+  "caveats": [
+    "Synthetic source files are not a representative distribution of student submissions.",
+    "All-pairs comparison is O(n^2); results depend on source size and hardware.",
+    "Peak memory is Python-traced allocation, not full process resident memory."
+  ],
+  "hardware": {
+    "logical_cpus": 8,
+    "physical_memory_gib": 12.99,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 126 Stepping 5, GenuineIntel",
+    "python": "3.13.3"
+  },
+  "method": "Synthetic Python files generated from controlled source variants with unique comments; file creation excluded, file reads included, every unordered file pair compared.",
+  "results": [
+    {
+      "feature_extraction_seconds": 0.30586570000014035,
+      "file_count": 100,
+      "file_read_included_in_total": true,
+      "fixture_generation_included_in_total": false,
+      "memory_measurement": "tracemalloc Python allocations; native allocations and OS page cache excluded",
+      "pair_count": 4950,
+      "pair_score_checksum": 4492.970778859953,
+      "pairwise_comparison_seconds": 0.7706183000000237,
+      "parse_seconds": 0.07759080000050744,
+      "peak_traced_memory_mib": 1.1610298156738281,
+      "total_runtime_seconds": 4.04267770000024
+    },
+    {
+      "feature_extraction_seconds": 1.4314412000003358,
+      "file_count": 500,
+      "file_read_included_in_total": true,
+      "fixture_generation_included_in_total": false,
+      "memory_measurement": "tracemalloc Python allocations; native allocations and OS page cache excluded",
+      "pair_count": 124750,
+      "pair_score_checksum": 114782.20276985738,
+      "pairwise_comparison_seconds": 21.381550600000082,
+      "parse_seconds": 0.4413427999998021,
+      "peak_traced_memory_mib": 2.3316030502319336,
+      "total_runtime_seconds": 35.1771662000001
+    },
+    {
+      "feature_extraction_seconds": 3.1295663999999306,
+      "file_count": 1000,
+      "file_read_included_in_total": true,
+      "fixture_generation_included_in_total": false,
+      "memory_measurement": "tracemalloc Python allocations; native allocations and OS page cache excluded",
+      "pair_count": 499500,
+      "pair_score_checksum": 459714.9857788081,
+      "pairwise_comparison_seconds": 75.63395729999957,
+      "parse_seconds": 0.8510698999998567,
+      "peak_traced_memory_mib": 4.28048038482666,
+      "total_runtime_seconds": 97.6696920000004
+    }
+  ]
+}

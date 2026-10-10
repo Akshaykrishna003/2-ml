@@ -1,0 +1,402 @@
+{
+  "dataset": "PS-23 synthetic controlled corpus v1",
+  "dataset_origin": "Synthetic, hand-authored Python examples; no external dataset used.",
+  "limitations": [
+    "Synthetic labels encode known source provenance and controlled transformations, not real plagiarism judgments.",
+    "Only four task groups are in the held-out test split; metrics are not representative of deployment.",
+    "Similarity thresholds are fixed diagnostic baselines, not calibrated plagiarism decisions.",
+    "The AST distribution cosine is structural evidence, not semantic equivalence."
+  ],
+  "methods": {
+    "ast_only": {
+      "by_transformation": {
+        "equivalent_loop_rewrite": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 1
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 1,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "formatting_and_comments": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identical_program": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identifier_renamed": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "independently_written_same_problem": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 4,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 1.0,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "partial_overlap": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "similar_looking_different_behavior": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 4,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 1.0,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "unrelated_programs": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 8,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 1.0,
+          "pair_count": 8,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 16,
+        "tn": 0,
+        "tp": 33
+      },
+      "f1": 0.8048780487804877,
+      "false_positive_rate": 1.0,
+      "pair_count": 49,
+      "precision": 0.673469387755102,
+      "recall": 1.0,
+      "threshold": 0.5
+    },
+    "combined": {
+      "by_transformation": {
+        "equivalent_loop_rewrite": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 1
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 1,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "formatting_and_comments": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identical_program": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identifier_renamed": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "independently_written_same_problem": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 1,
+            "tn": 3,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.25,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "partial_overlap": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "similar_looking_different_behavior": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 4,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 1.0,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "unrelated_programs": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 3,
+            "tn": 5,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.375,
+          "pair_count": 8,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 8,
+        "tn": 8,
+        "tp": 33
+      },
+      "f1": 0.8918918918918919,
+      "false_positive_rate": 0.5,
+      "pair_count": 49,
+      "precision": 0.8048780487804879,
+      "recall": 1.0,
+      "threshold": 0.5
+    },
+    "token_only": {
+      "by_transformation": {
+        "equivalent_loop_rewrite": {
+          "confusion_matrix": {
+            "fn": 1,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 1,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "formatting_and_comments": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identical_program": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 8
+          },
+          "f1": 1.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        "identifier_renamed": {
+          "confusion_matrix": {
+            "fn": 8,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "independently_written_same_problem": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 4,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.0,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "partial_overlap": {
+          "confusion_matrix": {
+            "fn": 1,
+            "fp": 0,
+            "tn": 0,
+            "tp": 7
+          },
+          "f1": 0.9333333333333333,
+          "false_positive_rate": 0.0,
+          "pair_count": 8,
+          "precision": 1.0,
+          "recall": 0.875
+        },
+        "similar_looking_different_behavior": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 4,
+            "tn": 0,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 1.0,
+          "pair_count": 4,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "unrelated_programs": {
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 1,
+            "tn": 7,
+            "tp": 0
+          },
+          "f1": 0.0,
+          "false_positive_rate": 0.125,
+          "pair_count": 8,
+          "precision": 0.0,
+          "recall": 0.0
+        }
+      },
+      "confusion_matrix": {
+        "fn": 10,
+        "fp": 5,
+        "tn": 11,
+        "tp": 23
+      },
+      "f1": 0.7540983606557378,
+      "false_positive_rate": 0.3125,
+      "pair_count": 49,
+      "precision": 0.8214285714285714,
+      "recall": 0.696969696969697,
+      "threshold": 0.5
+    }
+  },
+  "seed": 23,
+  "split_policy": "Task-grouped fixed split; every variant and independent solution for a task remains in one split.",
+  "splits": {
+    "test": [
+      "maximum",
+      "fibonacci",
+      "word_count",
+      "average"
+    ],
+    "train": [
+      "sum_values",
+      "count_even",
+      "reverse_sequence",
+      "factorial",
+      "linear_search",
+      "digit_sum"
+    ],
+    "validation": [
+      "is_palindrome",
+      "gcd"
+    ]
+  },
+  "test_pair_count": 49,
+  "test_task_count": 4,
+  "threshold": 0.5,
+  "threshold_policy": "Fixed before measurement; no test-set tuning.",
+  "trained_model": {
+    "available": false,
+    "reason": "No trained classifier artifact exists. The small synthetic corpus is suitable for controlled baseline checks, not defensible model training or claims of generalization."
+  }
+}

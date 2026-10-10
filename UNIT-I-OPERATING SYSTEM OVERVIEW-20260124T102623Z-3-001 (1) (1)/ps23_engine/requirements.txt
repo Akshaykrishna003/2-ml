@@ -1,0 +1,11 @@
+# Core Dependencies
+# Preprocessing and AST
+# ML and Scoring
+scikit-learn
+numpy
+pandas
+# API and Integration
+fastapi
+uvicorn
+# Testing
+pytest
